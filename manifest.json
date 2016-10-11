@@ -8,13 +8,10 @@
   "permissions": [
     "tabs", "http://*/*"
   ],
-
-  "background": {
-    "scripts": ["background.js"]
-  },
   
-  "page_action": {
-    "default_icon": "icon16.png",
-    "default_title": "Chrome Anitube tool"
+  "browser_action": {
+    "default_icon": "images/icon16.png",
+    "default_title": "Chrome Anitube tool",
+    "default_popup": "html/popup.html"
   }
 }
