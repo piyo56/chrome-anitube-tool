@@ -1,0 +1,24 @@
+{
+  "name": "Anitube tool",
+  "version": "0.1",
+  "manifest_version": 2,
+  
+  "description": "Anitubeをより快適に見るためのツール",
+
+  "permissions": [
+    "tabs", "http://*/*"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["file:///*"],
+    "js":      ["content.js"]
+  }],
+  
+  "page_action": {
+    "default_icon": "icon16.png",
+    "default_title": "Chrome Anitube tool"
+  }
+}
