@@ -2,105 +2,25 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <style>
-html{
-  background: #080808;
-}
-header{
-  height: 50px;
-  line-height: 50px;
-  box-sizing: border-box;
-  border-bottom: 1px solid #e0e0e0;
-}
-header p {
-  padding: 0;
-  margin: 0;
-  font-size: 16pt;
-  letter-spacing: 2px;
-  color: white;
-}
-body {
-  width: 400px;
-  box-sizing: border-box;
-}
-main {
-  height: auto;
-  margin: 0;
-  padding: 10px 0;
-  box-sizing: border-box;
-}
-.container {
-  width: 400px;
-  margin: 0 auto;
-  text-align: center;
-}
-.btn {
-  height: 35px;
-  background: #eee;
-  /* background: #d90039; */
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  color: #111;
-  padding: 7px 5px;
-  box-sizing: border-box;
-  font-size: 11pt;
-  letter-spacing: 1px;
-  box-shadow: 0px 4px rgba(0,0,0,.4);
-  cursor: pointer;
-  text-align: center;
-}
-.btn:hover {
-  opacity: 0.8;
-}
-.pre {
-  width: 100px;
-  float: left;
-  margin-left: 80px;
-}
-.next{
-  width: 80px;
-  float: right;
-  margin-right:80px;
-}
-p {
-  color: white;
-}
-footer{
-  height: 40px;
-  line-height: 50px;
-  box-sizing: border-box;
-  border-top: 1px solid #e0e0e0;
-}
-
-#author {
-  height: 40px;
-  overflow: hidden;
-}
-.text {
-  letter-spacing: 1px;
-  float: right;
-  font-size: 10pt;
-  font-style: italic;
-  color: white;
-}
-.img {
-  float: right;
-  margin: 3px 5px 0 5px;
-}
-  </style>
+    <link rel="stylesheet" href="/css/default.css">
 </head>
 <header>
   <div class="container">
-    <p><span style="color: #d90039" >ani</span>tube Tool</p>
+    <p style="font-weight: bold;"><span style="color: #d90039;" >Ani</span>tube Tool</p>
   </div>
 </header>
 <body>
   <main>
-  <h2><span style="color: white;">Jump Episode...</span></h2>
-  <div id="previous_button" class="btn pre">←previous</div>
-  <div id="next_button" class="btn next">next→</div>
+  <h2><span style="color: white;">Jump Episode...?</span></h2>
+  <button id="previous_button">←previous</button>
+  <button id="next_button">next→</button>
   <div style="clear:both;"></div>
-  <h2><span style="color: white;">Save Episode?...</span></h2>
+  <h2><span style="color: white;">Save Episode...?</span></h2>
+  <button id="save_button" >save</button>
+  <button id="load_button" >load</button>
+  <div style="clear:both;"></div>
+  <p style="font-size: 14px;margin-left: 25px;">Saved item :</p>
+  <div id="saved_episode_name"></div>
   </main>
 </body>
 <footer>
@@ -113,6 +33,6 @@ footer{
     </div>
   </div>
 </footer>
-<script src="/js/move_episode.js"></script>
 <script src="/js/save_episode.js"></script>
+<script src="/js/move_episode.js"></script>
 </html>
