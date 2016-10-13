@@ -1,9 +1,7 @@
 name_key = "episode_name";
 url_key = "episode_url";
-current_url = "";
 
 // Clicked?
-// 動かない！わからない！
 document.addEventListener('DOMContentLoaded', function(){
 
   chrome.tabs.query({"active": true, currentWindow:true}, function(tabs){
@@ -41,7 +39,6 @@ function save_episode() {
     chrome.tabs.executeScript(null, {
       "code": "document.getElementsByClassName('mainBoxHeader')[0].innerHTML"
     }, function(results){
-      //console.log("results", results);
       if(tabs.length == 0 || !results[0]) {
         console.info("failed to save! :(");
         return;

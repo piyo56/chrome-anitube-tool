@@ -6,10 +6,10 @@ document.getElementById("previous_button").addEventListener("click", function(){
   goto_episode(false);
 });
 
-// GETリクエストを投げてレスポンス(text/html)を返す関数
+// GETリクエストを投げてそのレスポンスに対して色々する関数
 function http_get(url, callback) {
   var xml_http = new XMLHttpRequest();
-  xml_http.open("GET", url, false); // false for synchronous request
+  xml_http.open("GET", url, false);
   xml_http.send(null);
 
   callback(xml_http.responseText);
