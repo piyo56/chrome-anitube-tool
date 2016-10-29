@@ -26,23 +26,23 @@ function goto_episode(is_next){
 
     // 名前を空白でsplitし逆順でまわす
     for(var i=title_words.length-1; i>=0; i--){
-      int_word = parseInt(title_words[i])
+      episode_number = parseInt(title_words[i])
         // parseIntしてNaNでないならば
-        if(!Number.isNaN(int_word)){
+        if(!Number.isNaN(episode_number)){
           if(is_next){
-            title_words[i] = int_word + 1;
+            title_words[i] = episode_number + 1;
           }else{
-            title_words[i] = int_word - 1;
+            title_words[i] = episode_number - 1;
           }
           break;
         }
     }
 
     var parameter = title_words.join("+");
-    var reqest_url = "http://www.anitube.se/search/?search_id=" + parameter;
+    var request_url = "http://www.anitube.se/search/?search_id=" + parameter;
 
     // 次の動画ページにジャンプ
-    http_get(reqest_url, function(html){
+    http_get(request_url, function(html){
       parser = new DOMParser();
       dom = parser.parseFromString(html, "text/html");
       next_episode_url = dom.querySelector(".videoThumb > a").href;
